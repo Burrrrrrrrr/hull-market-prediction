@@ -1,0 +1,17 @@
+{
+  "objective": "regression",
+  "metric": "l2",
+  "learning_rate": 0.008554052787970981,
+  "n_estimators": 20000,
+  "num_leaves": 222,
+  "min_child_samples": 134,
+  "subsample": 0.8835617480896776,
+  "subsample_freq": 8,
+  "colsample_bytree": 0.9528623088730783,
+  "reg_alpha": 0.05945996810888403,
+  "reg_lambda": 8.502680653559366,
+  "max_depth": 9,
+  "random_state": 42,
+  "n_jobs": -1,
+  "device_type": "gpu"
+}
