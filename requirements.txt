@@ -7,3 +7,6 @@ joblib
 pyyaml
 optuna
 matplotlib
+neuralforecast
+torch
+pydantic

@@ -1,0 +1,6 @@
+{
+  "learning_rate": 0.0091182595037709,
+  "n_heads": 3,
+  "dropout": 0.04324492089932111,
+  "hidden_mult": 82
+}

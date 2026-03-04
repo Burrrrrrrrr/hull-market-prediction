@@ -1,0 +1,1 @@
+﻿{"learning_rate": 0.00638381807270732, "input_size": 94, "batch_size": 9, "max_steps": 338, "mlp_units": 128, "mlp_layers": 2, "n_blocks": 3, "stack_types": "identity-trend", "n_polynomials": 4, "n_harmonics": 3}

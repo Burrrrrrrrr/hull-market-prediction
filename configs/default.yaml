@@ -84,6 +84,78 @@ model:
     timeout_seconds: 0
     direction: "maximize"
 
+patchtst:
+  enabled: false
+  use_exog: false
+  tuning:
+    n_trials: 20
+    max_folds: 5
+    timeout_seconds: 0
+  training:
+    input_size: 256
+    max_steps: 1000
+    max_steps_predict: 200
+    batch_size: 32
+    val_window: 63
+    step: 21
+    embargo: 20
+  search_space:
+    learning_rate: [0.0005, 0.01]
+    hidden_size: [64, 256]
+    n_heads: [2, 8]
+    dropout: [0.0, 0.2]
+
+tft:
+  enabled: false
+  use_exog: true
+  tuning:
+    n_trials: 20
+    max_folds: 5
+    timeout_seconds: 0
+  training:
+    input_size: 64
+    max_steps: 1000
+    max_steps_predict: 200
+    batch_size: 8
+    val_window: 63
+    step: 21
+    embargo: 20
+  search_space:
+    learning_rate: [0.0005, 0.01]
+    hidden_size: [32, 96]
+    n_heads: [2, 8]
+    dropout: [0.0, 0.2]
+
+nbeats:
+  enabled: false
+  use_exog: false
+  tuning:
+    n_trials: 20
+    max_folds: 5
+    timeout_seconds: 0
+  training:
+    input_size: 64
+    max_steps: 400
+    max_steps_predict: 200
+    batch_size: 16
+    val_window: 63
+    step: 21
+    embargo: 20
+  search_space:
+    learning_rate: [0.0005, 0.01]
+    input_size: [32, 96]
+    batch_size: [4, 16]
+    max_steps: [200, 500]
+    mlp_units: [64, 256]
+    mlp_layers: [1, 3]
+    n_blocks: [1, 3]
+    stack_types:
+      - "identity-trend-seasonality"
+      - "identity-trend"
+      - "identity-seasonality"
+    n_polynomials: [1, 4]
+    n_harmonics: [1, 4]
+
 outputs:
   artifacts_dir: "artifacts"
   model_name: "lgbm_regression.joblib"
